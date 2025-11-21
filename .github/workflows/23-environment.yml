@@ -1,0 +1,10 @@
+name: 23-environment
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  showenv:
+    runs-on: ubuntu-latest
+    environment: Demo
+    steps:
+      - run: echo ${{ vars.DEMO_ENV }}
